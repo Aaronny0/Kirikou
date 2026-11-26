@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --font-fraunces: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-jakarta: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-jetbrains: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+@theme inline {
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-jakarta);
+  --font-mono: var(--font-jetbrains);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #110F0D;
+  color: #F4EFE6;
+}
+
+body {
+  background-color: #110F0D;
+  color: #F4EFE6;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
